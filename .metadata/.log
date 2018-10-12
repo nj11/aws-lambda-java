@@ -1,0 +1,32 @@
+!SESSION 2018-10-12 11:34:57.465 -----------------------------------------------
+eclipse.buildId=4.9.0.I20180906-0745
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data C:\natasha\awsworkspace\HelloLambda -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-10-12 11:35:07.135
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\natasha.juneja'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-10-12 11:35:07.841
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-10-12 11:35:08.774
+!MESSAGE No profile found: default
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-10-12 11:35:08.847
+!MESSAGE Monitoring content of C:\Users\natasha.juneja\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-10-12 11:35:09.351
+!MESSAGE AWS toolkit core plugin initialized after 1510 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-10-12 11:35:09.396
+!MESSAGE The current accountId is not found in the system. Switching to the default account.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-10-12 11:35:09.727
+!MESSAGE Initialized a new Cognito identity us-east-1:d494a814-64a1-4046-96bc-d710b031bc8b
