@@ -14,7 +14,7 @@ import com.amazonaws.services.lambda.model.InvokeResult;
  * 1.For Lambda to be able to access your lambda function you have to create
  * an IAM role that gives it access to your resources.
  * Attach policy AWSLambdaBasicExecutionRole to the role.
- * Attach policy AWSLambdaBasicExecutionRole to the role.
+ * Attach policy AmazonDynamoDBFullAccess to the role.
  *
  * 2.Also create a S3 bucket where lambda function
  *  will get uploaded before it's run.s3 bucket should be
@@ -33,8 +33,10 @@ public class WidgetLambdaClient {
 		System.out.println("=========================================");
 		System.out.println("Invoking LAMBDA client for function :: " + functionName);
 		
-		// (1) Define the AWS Region in which the function is to be invoked
-		Regions region = Regions.fromName("us-east-1");
+		System.out.println("\n");
+		
+		// (1) Define the AWS Region in which the function exists.
+		Regions region = Regions.fromName("us-east-2");
 		
 		AWSLambdaClientBuilder builder = AWSLambdaClientBuilder.standard()
                 .withRegion(region);
@@ -52,13 +54,15 @@ public class WidgetLambdaClient {
 			InvokeResult result = lamdaClient.invoke(req);
 			
 			 // We should validate the response
-            System.out.println("Status Code: " + result.getStatusCode());
+            System.out.println("Response Status Code :: " + result.getStatusCode()); //200 IS OK.
             
             // Get the response as JSON
             String json = new String(result.getPayload().array(), "UTF-8");
             
             // Show the response; we could use a library like Jack son to convert this to an object
-            System.out.println(json);
+            System.out.println("Response JSON :: " + json);
+            
+            System.out.println("\n");
             
             System.out.println("Lambda  invocation completed successfully for function ::" + functionName);
 			
